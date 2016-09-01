@@ -54,7 +54,7 @@ License
 
 Copyright 2016 by `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_. All rights reserved.
 
-DyMerge is under the terms of the `MIT License <https://www.tldrlegal.com/l/mit>`_, following all clarifications stated in the `license file <https://github.com/k4m4/dymerge/doc/LICENSE>`_.
+DyMerge is under the terms of the `MIT License <https://www.tldrlegal.com/l/mit>`_, following all clarifications stated in the `license file <https://raw.githubusercontent.com/k4m4/dymerge/master/doc/LICENSE>`_.
 
 
 For more information head over to the `official project page <https://nikolaskama.me/dymergeproject/>`_.
