@@ -16,7 +16,7 @@ Author: `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_ (`nikolaskama.me <
 Installation
 -------------
 
-Preferably, you can install DyMerge by cloning the `Git Repo <https://github.com/k4m4/dymerge>`_:
+Preferably, you can install DyMerge by cloning the `Git Repo <https://github.com/k4m4/pypi/dymerge>`_:
 
 ::
 
