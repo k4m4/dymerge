@@ -44,8 +44,8 @@ Demo
 
 Here's a short demo:
 
-.. image:: https://asciinema.org/a/1bz1t1wnkn1pt4mum5b52zwuh.png
-   :target: https://asciinema.org/a/1bz1t1wnkn1pt4mum5b52zwuh?autoplay=1
+.. image:: https://asciinema.org/a/84067.png
+   :target: https://asciinema.org/a/84067?autoplay=1
 
 (For more demos click `here <https://asciinema.org/~k4m4>`_)
 
