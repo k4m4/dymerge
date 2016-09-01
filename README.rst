@@ -16,13 +16,13 @@ Author: `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_ (`nikolaskama.me <
 Installation
 -------------
 
-Preferably, you can install DyMerge by cloning the `Git Repo <https://github.com/k4m4/pypi/dymerge>`_:
+Preferably, you can install DyMerge by cloning the `Git Repo <https://github.com/k4m4/dymerge>`_:
 
 ::
 
     $ git clone https://github.com/k4m4/dymerge.git
 
-Alternatively, you can install it from the `Cheese Shop <https://pypi.python/pypi/dymerge/>`_ using the pip command:
+Alternatively, you can install it from the `Cheese Shop <https://pypi.python.org/pypi/dymerge>`_ using the pip command:
 
 ::
 
