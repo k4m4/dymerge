@@ -58,4 +58,4 @@ DyMerge is under the terms of the `MIT License <https://www.tldrlegal.com/l/mit>
 
 
 For more information head over to the `official project page <https://nikolaskama.me/dymergeproject/>`_.
-You can also go ahead and email me anytime at nikolaskam{at}gmail{dot}com.
+You can also go ahead and email me anytime at **nikolaskam{at}gmail{dot}com**.
