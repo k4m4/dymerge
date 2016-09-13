@@ -3,7 +3,7 @@
 
 """
 Copyright (C) 2016 Nikolaos Kamarinakis (nikolaskam@gmail.com)
-See License at nikolaskama.me (https://nikolaskama.me/projects/dymerge)
+See License at nikolaskama.me (https://nikolaskama.me/dymergeproject)
 
  ____                                                    
 /\  _`\           /'\_/`\                               
