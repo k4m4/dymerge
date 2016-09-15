@@ -2,7 +2,7 @@
 # dymerge.py
 
 """
-Copyright (C) 2016 Nikolaos Kamarinakis (nikolaskam@gmail.com)
+Copyright (C) 2016 Nikolaos Kamarinakis (nikolaskam{at}gmail{dot}com)
 See License at nikolaskama.me (https://nikolaskama.me/dymergeproject)
 
  ____                                                    
