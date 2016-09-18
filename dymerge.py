@@ -29,7 +29,6 @@ def displayLogo():
             lines = myFile.readlines()
             for line in lines:
                 logo.append(line.rstrip('\n'))
-        myFile.close()
         for line in logo:
             print line
 
@@ -105,7 +104,6 @@ def readFiles():
                     flushPrint("Dictionary Is Empty --> Please Enter A Valid File", True, True)
                     flushPrint("System Exit\n", True)
                     raise SystemExit
-            myFile.close()
 
             # Error --> "File (dict.) is compressed"
             commonFormats = open('txt/archive_formats.txt').read().split('\n')
@@ -193,8 +191,6 @@ def zipIt():
         with zipfile.ZipFile('%s' % (outFile), 'w', zipfile.ZIP_DEFLATED) as zf:
             try:
                 zf.writestr(dicFileIn, wordListStr)
-            finally:
-                zf.close()
     elif zipType == 'tar' or zipType == 'tar.bz2' or zipType == 'tar.gz':
         if zipType == 'tar':
             mode = 'w'
@@ -207,22 +203,14 @@ def zipIt():
                 zfInfo = tarfile.TarInfo('%s' % (dicFileIn))
                 zfInfo.size = len(wordListStr)
                 zf.addfile(zfInfo, StringIO.StringIO(wordListStr))
-            finally:
-                zf.close()
     elif zipType == 'gz':
         with gzip.GzipFile('%s' % (outFile), 'w', compresslevel = 9) as zf:
             try:
                 zf.writelines(wordListStr)
-            finally:
-                zf.close()
     elif zipType == 'bz2':
         with bz2.BZ2File('%s' % (outFile), 'w', compresslevel = 9) as zf:
             try:
                 zf.writelines(wordListStr)
-            finally:
-                zf.close()
-        
-        
 
 def taskComplete():
     global wordList
