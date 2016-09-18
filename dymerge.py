@@ -29,6 +29,7 @@ def displayLogo():
             lines = myFile.readlines()
             for line in lines:
                 logo.append(line.rstrip('\n'))
+        myFile.close()
         for line in logo:
             print line
 
@@ -104,6 +105,7 @@ def readFiles():
                     flushPrint("Dictionary Is Empty --> Please Enter A Valid File", True, True)
                     flushPrint("System Exit\n", True)
                     raise SystemExit
+            myFile.close()
 
             # Error --> "File (dict.) is compressed"
             commonFormats = open('txt/archive_formats.txt').read().split('\n')
@@ -277,6 +279,7 @@ def taskComplete():
             with open(outFile, 'w+') as myFile:
                 for word in wordList:
                     myFile.write(str(word)+'\n')
+            myFile.close()
         except IOError: # Error --> "Invalid Output File Path"
             delayEffect()
             flushPrint("Invalid Path To Out File Given --> Please Enter a Valid Path", True, True)
