@@ -5,14 +5,14 @@
 Copyright (C) 2016 Nikolaos Kamarinakis (nikolaskam@gmail.com)
 See License at nikolaskama.me (https://nikolaskama.me/dymergeproject)
 
- ____                                                    
-/\  _`\           /'\_/`\                               
-\ \ \/\ \  __  __/\      \     __   _ __    __      __   
- \ \ \ \ \/\ \/\ \ \ \__\ \  /'__`\/\` __\/'_ `\  /'__`\ 
-  \ \ \_\ \ \ \_\ \ \ \_/\ \/\  __/\ \ \//\ \_\ \/\  __/ 
+ ____
+/\  _`\           /'\_/`\
+\ \ \/\ \  __  __/\      \     __   _ __    __      __
+ \ \ \ \ \/\ \/\ \ \ \__\ \  /'__`\/\` __\/'_ `\  /'__`\
+  \ \ \_\ \ \ \_\ \ \ \_/\ \/\  __/\ \ \//\ \_\ \/\  __/
    \ \____/\/`____ \ \_\\ \_\ \____\\ \_\\ \____ \ \____\
     \/___/  `/___/  \/_/ \/_/\/____/ \/_/ \/____\ \/____/
-               /\___/                       /\____/      
+               /\___/                       /\____/
                \/__/  Made with <3 by k4m4  \_/__/
 """
 
@@ -34,13 +34,13 @@ def displayLogo():
 
     # some people just don't like seeing logos in their clis...
     except IOError: # (Ignored) Error --> "No Such (logo.txt) File"
-        return       
+        return
 
 def flushPrint(msg, error=False, ext=False):
     if ext:
         msg, msg_e = msg.split(' --> ')
         msg += ' --> '
-        
+
     if fast:
         if error:
             sys.stdout.write(colored('\n[-] ', 'red'))
@@ -91,8 +91,18 @@ def readFiles():
         delayEffect()
         flushPrint("Merging Dictionaries")
     else:
-        flushPrint("Reading Dictionary")
+        flushPrint("Reading Dictionary(ies)")
     for i in range(len(argv)):
+	"""
+        if os.path.isdir(argv[i]):
+            files = os.listdir(argv[i])
+	    path = argv[i]
+            for file in files:
+                argv.append(str(path) + os.sep + file)
+		print('argv:', argv) # {TESTING}
+                argv.remove(argv[i])
+	    print('files:', files) # {TESTING}
+	"""
         try:
             with open(argv[i], 'r') as myFile:
                 if os.path.getsize(argv[i]) > 0:
@@ -117,7 +127,7 @@ def readFiles():
                     flushPrint("Invalid Dictionary File Format --> Please Enter A Valid File", True, True)
                     flushPrint("System Exit\n", True)
                     raise SystemExit
-                
+
         except IOError: # Error --> "No such (dict.) file"
             delayEffect()
             flushPrint("Dictionary(ies) Not Found --> Please Enter A Valid Path", True, True)
@@ -131,7 +141,7 @@ def includeValues():
 
 def makeUnique():
     global wordList
-    
+
     flushPrint("Removing All Duplicates")
     # wordList = list(set(wordList)) --> This Messes Up The Order
     seen = set()
@@ -140,13 +150,13 @@ def makeUnique():
 
 def sortList():
     global wordList
-    
+
     flushPrint("Sorting Dictionary Alphabetically")
     wordList = sorted(wordList)
 
 def reverseList():
     global wordList
-    
+
     flushPrint("Reversing Dictionary Items")
     wordList = list(reversed(wordList))
 
@@ -155,7 +165,7 @@ def uniqueOutFile(fName, fType):
     global zipFile
     global compress
     global outFile
-    
+
     if compress:
         checkFile = zipFile
         fType += '.' + zipType
@@ -186,7 +196,7 @@ def zipIt():
 
     flushPrint("Zipping File")
     wordListStr = '\n'.join(wordList)
-    
+
     if zipType == 'zip':
         with zipfile.ZipFile('%s' % (outFile), 'w', zipfile.ZIP_DEFLATED) as zf:
             try:
@@ -219,8 +229,8 @@ def zipIt():
                 zf.writelines(wordListStr)
             finally:
                 zf.close()
-        
-        
+
+
 
 def taskComplete():
     global wordList
@@ -230,7 +240,7 @@ def taskComplete():
     global outFile
     global compress
     global dicFileIn
-    
+
     dicFile = output_file
     dList = dicFile.split('/')
     dicFileIn = dList[len(dList)-1]
@@ -243,13 +253,13 @@ def taskComplete():
         dicFile = '/'.join(dList)
 
     zipType = zip_type
-    
+
     compress = False
 
     # to compress or to !compress
     if zipType != 'txt':
         compress = True
-        
+
     f = dicFile.split('.')
     fName = f[0]
     # check if file format was inputed
@@ -258,7 +268,7 @@ def taskComplete():
     else:
         fName = dicFile
         fType = 'txt'
-    
+
     # convert format into legit extension
     if zipType == 'bzip2':
         zipType = 'bz2'
@@ -334,17 +344,17 @@ def main():
 
     version = open('doc/VERSION').read().replace('\n','')
     info = 'DyMerge ' + version + ' Nikolaos Kamarinakis (nikolaskama.me)'
-    
+
     examples = ('\nExamples:\n'+
                 '  python dymerge.py /usr/share/wordlists/rockyou.txt /lists/cewl.txt -s -u\n' +
                 '  python dymerge.py /lists/cewl.txt /lists/awlg.txt -s -u -i and,this\n' +
                 '  python dymerge.py ~/fsocity.dic -u -r -o ~/clean.txt\n' +
                 '  python dymerge.py /dicts/crunch.txt /dicts/john.txt -u -f -z bz2\n')
-    
+
     parser = optparse.OptionParser(epilog=examples,
                                    usage='python %prog {dictionaries} [options]',
                                    prog='dymerge.py', version=('DyMerge ' + version))
-    
+
     parser.add_option('-o', '--output', action='store', default='dymerged.txt',
                       dest='output_file', help='output filename')
 
@@ -398,6 +408,19 @@ def main():
 
     argLen = len(sys.argv[1:])
     dicLen = len(argv)
+    dirLen = 0
+    # directories now acceptable
+    for path in argv:
+        dirPath = os.path.isdir(path)
+        if dirPath:
+	    files = os.listdir(path)
+	    dicLen -= 1
+	    for file in files:
+		argv.append(str(path) + os.sep + file)
+            dicLen += len(os.listdir(path))
+	    argLen += len(os.listdir(path))
+	    argv.remove(path)
+
     if argLen > 1 and dicLen > 0:
 
         flushPrint("Starting Dictionary Merge Task")
@@ -406,7 +429,7 @@ def main():
         delayEffect()
 
         if include_values != None:
-            includeValues()    
+            includeValues()
         delayEffect()
 
         if unique:
@@ -422,7 +445,7 @@ def main():
         delayEffect()
 
         taskComplete()
-    
+
     elif argLen > 0 and dicLen < 1:
         flushPrint("No Dictionaries To Merge --> Use '-h' For Usage Help", True, True)
         flushPrint("System Exit\n", True)
