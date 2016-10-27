@@ -7,7 +7,7 @@ A simple, yet powerful tool - written purely in python - which takes given
 wordlists and merges them into one dynamic dictionary that can then be used
 as ammunition for a successful dictionary based (or bruteforce) attack.
 
-Compatible with Python 2.6+.
+Compatible with Python 2.6 & 2.7.
 
 Author: `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_ (`nikolaskama.me <https://nikolaskama.me/>`_)
 
