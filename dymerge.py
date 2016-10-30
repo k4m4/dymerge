@@ -230,8 +230,6 @@ def zipIt():
             finally:
                 zf.close()
 
-
-
 def taskComplete():
     global wordList
     global dicFile
@@ -460,5 +458,5 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        flushPrint('Exiting...', True)
-        quit()
+        flushPrint("System Exit\n", True)
+        raise SystemExit
