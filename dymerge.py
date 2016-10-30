@@ -457,4 +457,8 @@ def main():
         flushPrint("Run 'man' Command To View Man Page\n")
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        flushPrint('Exiting...', True)
+        quit()
