@@ -46,7 +46,7 @@ Here's a short demo:
 License
 --------
 
-Copyright 2016 by `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_. All rights reserved.
+Copyright 2016 by `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_. Some rights reserved.
 
 DyMerge is under the terms of the `MIT License <https://www.tldrlegal.com/l/mit>`_, following all clarifications stated in the `license file <https://raw.githubusercontent.com/k4m4/dymerge/master/doc/LICENSE>`_.
 
