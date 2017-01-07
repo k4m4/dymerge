@@ -30,7 +30,7 @@ def displayLogo():
             for line in lines:
                 logo.append(line.rstrip('\n'))
         for line in logo:
-            print line
+            sys.stdout.write(line+'\n')
 
     # some people just don't like seeing logos in their clis...
     except IOError: # (Ignored) Error --> "No Such (logo.txt) File"
