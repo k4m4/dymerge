@@ -344,6 +344,7 @@ def main():
     info = 'DyMerge ' + version + ' Nikolaos Kamarinakis (nikolaskama.me)'
 
     examples = ('\nExamples:\n'+
+		'  python dymerge.py ~/dictionaries/ -s -u -o ~/powerful.txt\n' +
                 '  python dymerge.py /usr/share/wordlists/rockyou.txt /lists/cewl.txt -s -u\n' +
                 '  python dymerge.py /lists/cewl.txt /lists/awlg.txt -s -u -i and,this\n' +
                 '  python dymerge.py ~/fsocity.dic -u -r -o ~/clean.txt\n' +
