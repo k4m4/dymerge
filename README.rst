@@ -43,6 +43,11 @@ Here's a short demo:
 
 (For more demos click `here <https://asciinema.org/~k4m4>`_)
 
+Developer
+-----------
+
+* Nikolaos Kamarinakis - `@nikolaskama <https://twitter.com/nikolaskama>`_
+
 License
 --------
 
