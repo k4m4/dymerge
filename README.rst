@@ -1,3 +1,5 @@
+.. image:: https://nikolaskama.me/content/images/2017/02/dymerge_small.png
+
 DyMerge
 =======
 
@@ -19,8 +21,6 @@ Author: `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_ (`nikolaskama.me <
     :target: https://github.com/k4m4
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :target: https://github.com/k4m4/onioff/blob/master/LICENSE
-
-.. image:: https://nikolaskama.me/content/images/2016/08/dymerge.png
 
 -------------
 
