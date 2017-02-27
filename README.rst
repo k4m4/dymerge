@@ -11,7 +11,7 @@ Compatible with Python 2.6 & 2.7.
 
 Author: `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_ (`nikolaskama.me <https://nikolaskama.me/>`_)
 
-.. image:: https://img.shields.io/github/stars/k4m4/dymerge.svg
+.. image:: https://travis-ci.org/k4m4/dymerge.svg?branch=master
     :target: https://travis-ci.org/k4m4/dymerge
 .. image:: https://img.shields.io/badge/say%20thanks-%3A%29-blue.svg
     :target: https://saythanks.io/to/k4m4
