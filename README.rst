@@ -1,3 +1,5 @@
+.. image:: https://nikolaskama.me/content/images/2017/02/dymerge_small.png
+
 DyMerge
 =======
 
@@ -11,7 +13,16 @@ Compatible with Python 2.6 & 2.7.
 
 Author: `Nikolaos Kamarinakis <mailto:nikolaskam@gmail.com>`_ (`nikolaskama.me <https://nikolaskama.me/>`_)
 
-.. image:: https://nikolaskama.me/content/images/2016/08/dymerge.png
+.. image:: https://travis-ci.org/k4m4/dymerge.svg?branch=master
+    :target: https://travis-ci.org/k4m4/dymerge
+.. image:: https://img.shields.io/badge/say-thanks-ff69b4.svg
+    :target: https://saythanks.io/to/k4m4
+.. image:: https://img.shields.io/badge/made%20with-%3C3-red.svg
+    :target: https://github.com/k4m4
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://github.com/k4m4/dymerge/blob/master/LICENSE
+
+-------------
 
 Installation
 -------------
