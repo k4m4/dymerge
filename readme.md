@@ -18,7 +18,7 @@
 
 ---
 
-<p align="center">✨Read my latest post: <a href="https://nikolaskama.me/why-dymerge-sucks"><i>Why DyMerge Sucks.✨</i></a></p>
+<p align="center">✨Read my latest post: <a href="https://nikolaskama.me/why-dymerge-sucks"><i>Why DyMerge Sucks.</i></a>✨</p>
 
 ---
 
