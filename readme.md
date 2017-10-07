@@ -18,6 +18,10 @@
 
 ---
 
+<p align="center">✨Read my latest post: <a href="https://nikolaskama.me/why-dymerge-sucks"><i>Why DyMrge Sucks.✨</i></a></p>
+
+---
+
 <p align="center">
     <sub>Visit <a href="https://nikolaskama.me/dymergeproject/"><code>nikolaskama.me/dymergeproject</code></a> for more information. Check out my <a href="https://nikolaskama.me">blog</a> and follow me on <a href="https://twitter.com/nikolaskama">Twitter</a>.</sub>
 </p>
