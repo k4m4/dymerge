@@ -87,7 +87,7 @@ Here's a short demo:
 
 # Developer
 
-- Nikolaos Kamarinakis (k4m4) - [@nikolaskama](https://twitter.com/nikolaskama)
+- **Nikolaos Kamarinakis** (k4m4) - [@nikolaskama](https://twitter.com/nikolaskama)
 
 <br>
 
