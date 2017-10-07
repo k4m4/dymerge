@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="450" src="https://nikolaskama.me/content/images/2017/02/dymerge_small.png" alt="DyMerge Logo">
+    <img width="650" src="https://nikolaskama.me/content/images/2017/02/dymerge_small.png" alt="DyMerge Logo">
 </h1>
 
 
