@@ -452,8 +452,7 @@ def main():
         flushPrint("No Options Selected --> Use '-h' For Usage Help", True, True)
         flushPrint("System Exit\n", True)
     else:
-        flushPrint("Use '-h' Or '--help' For Usage Options")
-        flushPrint("Run 'man' Command To View Man Page\n")
+        flushPrint("Use '-h' Or '--help' For Usage Options\n")
 
 if __name__ == '__main__':
     try:
