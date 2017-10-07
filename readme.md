@@ -4,11 +4,11 @@
 
 
 > A simple, yet powerful tool - written purely in python - which takes given wordlists and merges them into one dynamic dictionary that can then be used as ammunition for a successful dictionary based (or bruteforce) attack.
-<br>
 
 - Compatible with Python 2.6 & 2.7.
-
 - Author: [Nikolaos Kamarinakis](mailto:nikolaskam@gmail.com) ([nikolaskama.me](https://nikolaskama.me/))
+
+<br>
 
 [![Build Status](https://travis-ci.org/k4m4/dymerge.svg?branch=master)](https://travis-ci.org/k4m4/dymerge)
 [![Donations Badge](https://yourdonation.rocks/images/badge.svg)](https://yourdonation.rocks)
