@@ -408,17 +408,17 @@ def main():
     argLen = len(sys.argv[1:])
     dicLen = len(argv)
     dirLen = 0
-    # directories now acceptable
+    # directory argument implementation
     for path in argv:
         dirPath = os.path.isdir(path)
         if dirPath:
             files = os.listdir(path)
             dicLen -= 1
-	    for file in files:
-            argv.append(str(path) + os.sep + file)
-            dicLen += len(os.listdir(path))
-            argLen += len(os.listdir(path))
-            argv.remove(path)
+            for file in files:
+                argv.append(str(path) + os.sep + file)
+                dicLen += len(os.listdir(path))
+	    argLen += len(os.listdir(path))
+	    argv.remove(path)
 
     if argLen > 1 and dicLen > 0:
 
