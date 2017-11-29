@@ -412,13 +412,13 @@ def main():
     for path in argv:
         dirPath = os.path.isdir(path)
         if dirPath:
-	    files = os.listdir(path)
-	    dicLen -= 1
+            files = os.listdir(path)
+            dicLen -= 1
 	    for file in files:
-		argv.append(str(path) + os.sep + file)
+            argv.append(str(path) + os.sep + file)
             dicLen += len(os.listdir(path))
-	    argLen += len(os.listdir(path))
-	    argv.remove(path)
+            argLen += len(os.listdir(path))
+            argv.remove(path)
 
     if argLen > 1 and dicLen > 0:
 
@@ -432,7 +432,7 @@ def main():
         delayEffect()
 
         if unique:
-           makeUnique()
+            makeUnique()
         delayEffect()
 
         if sort:
