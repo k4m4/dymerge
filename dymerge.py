@@ -17,9 +17,15 @@ See License at nikolaskama.me (https://nikolaskama.me/dymergeproject)
 """
 
 import sys, os, optparse, time, zipfile, tarfile, bz2, gzip
-from io import StringIO
 from time import sleep
 from termcolor import colored
+
+PY3 = sys.version_info > (3,)
+
+if PY3:
+    from io import StringIO
+else:
+    import StringIO
 
 def displayLogo():
     logo = []
@@ -310,7 +316,13 @@ def taskComplete():
     delayEffect()
     saved = "Final Dictionary Saved As --> " + str(outFile)
     flushPrint(saved, False, True)
-    print("\nComp/tional Time Elapsed:", (time.process_time() - start))
+
+    if sys.version_info < (3, 8):
+        end = time.clock()
+    else:
+        end = time.process_time()
+
+    print("\nComp/tional Time Elapsed: {}".format(end - start))
 
 def globalizeValues(o, i, z, s, u, r, f, a):
     global output_file
@@ -337,7 +349,10 @@ def main():
     global info
     global wordList
 
-    start = time.process_time()
+    if sys.version_info < (3, 8):
+        start = time.clock()
+    else:
+        start = time.process_time()
 
     optparse.OptionParser.format_epilog = lambda self, formatter: self.epilog
 
