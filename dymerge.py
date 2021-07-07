@@ -16,13 +16,20 @@ See License at nikolaskama.me (https://nikolaskama.me/dymergeproject)
                \/__/  Made with <3 by k4m4  \_/__/
 """
 
-import sys, os, optparse, time, zipfile, tarfile, bz2, gzip, imp, StringIO
+import sys, os, optparse, time, zipfile, tarfile, bz2, gzip
 from time import sleep
 from termcolor import colored
 
+PY3 = sys.version_info > (3,)
+
+if PY3:
+    from io import StringIO
+else:
+    import StringIO
+
 def displayLogo():
     logo = []
-    print info
+    print(info)
     try:
         path = 'txt/logo.txt'
         with open(path, 'r') as myFile:
@@ -93,7 +100,7 @@ def readFiles():
     else:
         flushPrint("Reading Dictionary(ies)")
     for i in range(len(argv)):
-	"""
+        """
         if os.path.isdir(argv[i]):
             files = os.listdir(argv[i])
 	    path = argv[i]
@@ -309,7 +316,13 @@ def taskComplete():
     delayEffect()
     saved = "Final Dictionary Saved As --> " + str(outFile)
     flushPrint(saved, False, True)
-    print "\nComp/tional Time Elapsed:", (time.clock() - start)
+
+    if sys.version_info < (3, 8):
+        end = time.clock()
+    else:
+        end = time.process_time()
+
+    print("\nComp/tional Time Elapsed: {}".format(end - start))
 
 def globalizeValues(o, i, z, s, u, r, f, a):
     global output_file
@@ -336,7 +349,10 @@ def main():
     global info
     global wordList
 
-    start = time.clock()
+    if sys.version_info < (3, 8):
+        start = time.clock()
+    else:
+        start = time.process_time()
 
     optparse.OptionParser.format_epilog = lambda self, formatter: self.epilog
 
@@ -417,8 +433,8 @@ def main():
             for file in files:
                 argv.append(str(path) + os.sep + file)
                 dicLen += len(os.listdir(path))
-	    argLen += len(os.listdir(path))
-	    argv.remove(path)
+            argLen += len(os.listdir(path))
+            argv.remove(path)
 
     if argLen > 1 and dicLen > 0:
 
